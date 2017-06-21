@@ -10,7 +10,7 @@ var stringifyJSON = function(obj) {
     if (typeof obj === 'undefined' || typeof obj === 'function') { return; }
     if (Array.isArray(obj)) {
       return '[' +
-      _.map(obj, item => (item === undefined || typeof item === 'function') ? 'null' : iterate(item)).join(',')
+      _.map(obj, item => (item === undefined || typeof item === 'function') ? 'null' : iterate(item))
       + ']';
     } else if (typeof obj === 'object') {
       var acc = '{'
